@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+sconst Discord = require("discord.js");
 const commando = require("discord.js-commando");
 const settings = require("./settings.json");
 const fs = require("fs");
@@ -48,4 +48,4 @@ bot.on("message", async message => {
     let cmd = bot.commands.get(command.slice(prefix.length));
     if(cmd) cmd.run(bot, message, args);
       });
-bot.login(settings.token);
+bot.login(process.env.Bot_Token);
